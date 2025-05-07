@@ -1,9 +1,15 @@
 # Setup
 
-1. Run `composer update`
-2. Run `./vendor/bin/sail up`
-3. Run `./vendor/bin/sail php artisan migrate --seed`
-4. Account created with credentials: `flutter-employee@example.com` / `password`
+1. Make sure you have Docker.app installed and opened (https://www.docker.com/products/docker-desktop/)
+2. Make sure you have PHP & Composer installed (to install run: `/bin/bash -c "$(curl -fsSL https://php.new/install/mac/8.4)"`)
+3. Run `cp .env.example .env`
+4. Run `composer update`
+5. Run `./vendor/bin/sail up`
+6. Run `./vendor/bin/sail npm install`
+7. Run `./vendor/bin/sail npm run build`
+8. Run `./vendor/bin/sail php artisan key:generate`
+9. Run `./vendor/bin/sail php artisan migrate --seed`
+10. Account created with credentials: `flutter-employee@example.com` / `password`
 
 # Tasks
 
@@ -23,5 +29,6 @@
     * Create api endpoint that will fetch those data and return as api resource
 
 4. Create macro for http request
+    * Open *routes/api.php* and refactor file using instructions bellow
     * Create http request macro for `https://jsonplaceholder.typicode.com/todos/1`
     * It should be called like following `Http::jsonPlaceholder()->get('/todos/1');`
