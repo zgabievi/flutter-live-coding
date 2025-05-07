@@ -30,5 +30,5 @@
 
 4. Create macro for http request
     * Open *routes/api.php* and refactor file using instructions bellow
-    * Create http request macro for `https://jsonplaceholder.typicode.com/todos/1`
+    * Create http request macro for `https://jsonplaceholder.typicode.com/`
     * It should be called like following `Http::jsonPlaceholder()->get('/todos/1');`
