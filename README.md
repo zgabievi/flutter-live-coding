@@ -1,15 +1,16 @@
 # Setup
 
 1. Make sure you have Docker.app installed and opened (https://www.docker.com/products/docker-desktop/)
-2. Make sure you have PHP & Composer installed (to install run: `/bin/bash -c "$(curl -fsSL https://php.new/install/mac/8.4)"`)
-3. Run `cp .env.example .env`
-4. Run `composer update`
-5. Run `./vendor/bin/sail up`
-6. Run `./vendor/bin/sail npm install`
-7. Run `./vendor/bin/sail npm run build`
-8. Run `./vendor/bin/sail php artisan key:generate`
-9. Run `./vendor/bin/sail php artisan migrate --seed`
-10. Account created with credentials: `flutter-employee@example.com` / `password`
+2. Run `WWWGROUP=1000 docker compose -f 'docker-compose.yml' up -d --build`
+3. Run `docker exec -it laravel-app bash`
+4. Run `cp .env.example .env`
+5. Run `composer update`
+6. Run `npm install`
+7. Run `npm run build`
+8. Run `php artisan key:generate`
+9. Run `php artisan migrate --seed`
+10. Exit docker bash and run `./vendor/bin/sail up`
+11. Account created with credentials: `flutter-employee@example.com` / `password`
 
 # Tasks
 
